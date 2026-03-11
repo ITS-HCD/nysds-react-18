@@ -5,6 +5,9 @@ import {
   NysGlobalFooterComponent,
   NysUnavFooterComponent,
   NysBacktotopComponent,
+  NysButtonComponent,
+  NysDropdownMenuComponent,
+  NysDropdownMenuItemComponent,
 } from "./utils/nysds-components";
 import AlertsSection from "./sections/AlertsSection";
 import BadgesSection from "./sections/BadgesSection";
@@ -18,6 +21,13 @@ import TableSection from "./sections/TableSection";
 import PaginationSection from "./sections/PaginationSection";
 import StepperSection from "./sections/StepperSection";
 import "./App.css";
+
+import {
+  NysButton,
+  NysDropdownMenu,
+  NysDropdownMenuItem,
+} from "@nysds/components/react";
+
 
 function App() {
   return (
@@ -43,6 +53,64 @@ function App() {
             This page demonstrates NYSDS web components integrated with React
             via <code>@lit/react</code>.
           </p>
+
+                <h2>Dropdown Action Menu with Icons</h2>
+      <NysButtonComponent
+        id="trigger-id3"
+        label="Actions Dropdown"
+      ></NysButtonComponent>
+      <NysDropdownMenuComponent
+        id="dropdownmenu3"
+        for="trigger-id3"
+        position="bottom-end"
+      >
+        <NysDropdownMenuItemComponent
+          label="Fire Confetti"
+          prefixIcon="lock_filled"
+        ></NysDropdownMenuItemComponent>
+        <NysDropdownMenuItemComponent
+          label="Action 2"
+          prefixIcon="social_youtube"
+        ></NysDropdownMenuItemComponent>
+        <NysDropdownMenuItemComponent
+          label="Disabled Action 3"
+          prefixIcon="visibility"
+          disabled
+        ></NysDropdownMenuItemComponent>
+        <NysDropdownMenuItemComponent
+          label="Action 4"
+          prefixIcon="sms"
+        ></NysDropdownMenuItemComponent>
+      </NysDropdownMenuComponent>
+
+      <NysButton
+        id="trigger-id4"
+        label="Actions Dropdown"
+      ></NysButton>
+      <NysDropdownMenu
+        id="dropdownmenu3"
+        for="trigger-id4"
+        position="bottom-end"
+      >
+        <NysDropdownMenuItem
+          label="Fire Confetti"
+          prefixIcon="lock_filled"
+          
+        ></NysDropdownMenuItem>
+        <NysDropdownMenuItem
+          label="Action 2"
+          prefixIcon="social_youtube"
+        ></NysDropdownMenuItem>
+        <NysDropdownMenuItem
+          label="Disabled Action 3"
+          prefixIcon="visibility"
+          disabled
+        ></NysDropdownMenuItem>
+        <NysDropdownMenuItem
+          label="Action 4"
+          prefixIcon="sms"
+        ></NysDropdownMenuItem>
+      </NysDropdownMenu>
 
           <AlertsSection />
           <BadgesSection />

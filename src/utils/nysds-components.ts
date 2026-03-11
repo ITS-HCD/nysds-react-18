@@ -12,6 +12,8 @@ import {
   NysCheckboxgroup,
   NysDatepicker,
   NysDivider,
+  NysDropdownMenu,
+  NysDropdownMenuItem,
   NysFileinput,
   NysGlobalFooter,
   NysGlobalHeader,
@@ -122,6 +124,21 @@ export const NysDividerComponent = createComponent({
   react: React,
   tagName: "nys-divider",
   elementClass: NysDivider,
+});
+
+export const NysDropdownMenuComponent = createComponent({
+  react: React,
+  tagName: "nys-dropdownmenu",
+  elementClass: NysDropdownMenu,
+});
+
+export const NysDropdownMenuItemComponent = createComponent({
+  react: React,
+  tagName: "nys-dropdownmenuitem",
+  elementClass: NysDropdownMenuItem,
+    events: {
+    onNysClick: "nys-click",
+  },
 });
 
 export const NysFileinputComponent = createComponent({
