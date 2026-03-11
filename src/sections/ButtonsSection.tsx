@@ -1,32 +1,32 @@
 import {
-  NysButtonComponent,
-  NysDividerComponent,
-} from "../utils/nysds-components";
+  NysButton,
+  NysDivider,
+} from "@nysds/components/react";
 
 const ButtonsSection = () => (
   <section id="buttons">
     <h2 className="section-heading">Buttons</h2>
     <h3>Variants</h3>
     <div className="component-row">
-      <NysButtonComponent label="Filled" variant="filled" />
-      <NysButtonComponent label="Outline" variant="outline" />
-      <NysButtonComponent label="Ghost" variant="ghost" />
-      <NysButtonComponent label="Text" variant="text" />
+      <NysButton label="Filled" variant="filled" />
+      <NysButton label="Outline" variant="outline" />
+      <NysButton label="Ghost" variant="ghost" />
+      <NysButton label="Text" variant="text" />
     </div>
     <h3>Sizes</h3>
     <div className="component-row">
-      <NysButtonComponent label="Small" size="sm" />
-      <NysButtonComponent label="Medium" size="md" />
-      <NysButtonComponent label="Large" size="lg" />
+      <NysButton label="Small" size="sm" />
+      <NysButton label="Medium" size="md" />
+      <NysButton label="Large" size="lg" />
     </div>
     <h3>With Icons & States</h3>
     <div className="component-row">
-      <NysButtonComponent label="Add Item" prefixIcon="add" />
-      <NysButtonComponent label="Download" prefixIcon="download" variant="outline" />
-      <NysButtonComponent label="Disabled" disabled />
+      <NysButton label="Add Item" prefixIcon="add" />
+      <NysButton label="Download" prefixIcon="download" variant="outline" />
+      <NysButton label="Disabled" disabled />
     </div>
-    <NysButtonComponent label="Full Width Button" fullWidth variant="outline" />
-    <NysDividerComponent />
+    <NysButton label="Full Width Button" fullWidth variant="outline" />
+    <NysDivider />
   </section>
 );
 

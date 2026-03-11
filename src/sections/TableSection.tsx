@@ -1,12 +1,12 @@
 import {
-  NysTableComponent,
-  NysDividerComponent,
-} from "../utils/nysds-components";
+  NysTable,
+  NysDivider,
+} from "@nysds/components/react";
 
 const TableSection = () => (
   <section id="data-display">
     <h2 className="section-heading">Table</h2>
-    <NysTableComponent striped bordered sortable>
+    <NysTable striped bordered sortable>
       <table>
         <caption>New York State County Data</caption>
         <thead>
@@ -50,8 +50,8 @@ const TableSection = () => (
           </tr>
         </tbody>
       </table>
-    </NysTableComponent>
-    <NysDividerComponent />
+    </NysTable>
+    <NysDivider />
   </section>
 );
 

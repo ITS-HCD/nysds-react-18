@@ -1,19 +1,19 @@
 import {
-  NysTextInputComponent,
-  NysTextareaComponent,
-  NysSelectComponent,
-  NysOptionComponent,
-  NysDatepickerComponent,
-  NysFileinputComponent,
-  NysTooltipComponent,
-  NysDividerComponent,
-} from "../utils/nysds-components";
+  NysTextinput,
+  NysTextarea,
+  NysSelect,
+  NysOption,
+  NysDatepicker,
+  NysFileinput,
+  NysTooltip,
+  NysDivider,
+} from "@nysds/components/react";
 
 const FormInputsSection = () => (
   <section id="forms">
     <h2 className="section-heading">Form Inputs</h2>
     <div className="component-grid">
-      <NysTextInputComponent
+      <NysTextinput
         id="fullname-input"
         name="fullName"
         label="Full name"
@@ -21,33 +21,33 @@ const FormInputsSection = () => (
         required
         width="lg"
       />
-      <NysTooltipComponent
+      <NysTooltip
         for="fullname-input"
         text="This should match your government-issued ID."
       />
 
-      <NysTextInputComponent
+      <NysTextinput
         name="email"
         label="Email address"
         type="email"
         width="lg"
       />
 
-      <NysTextInputComponent
+      <NysTextinput
         name="phone"
         label="Phone number"
         type="tel"
         width="md"
       />
 
-      <NysTextareaComponent
+      <NysTextarea
         name="comments"
         label="Additional comments"
         description="Provide any relevant details"
         rows={4}
       />
 
-      <NysSelectComponent
+      <NysSelect
         name="region"
         label="Select a region"
         id="region-select"
@@ -58,28 +58,28 @@ const FormInputsSection = () => (
         <option value="hudson">Hudson Valley</option>
         <option value="nyc">New York City</option>
         <option value="long-island">Long Island</option>
-      </NysSelectComponent>
+      </NysSelect>
 
-      <NysSelectComponent
+      <NysSelect
         name="county"
         label="Select a county"
         id="county-select"
       >
-        <NysOptionComponent value="albany" label="Albany" />
-        <NysOptionComponent value="erie" label="Erie" />
-        <NysOptionComponent value="kings" label="Kings" />
-        <NysOptionComponent value="monroe" label="Monroe" />
-        <NysOptionComponent value="onondaga" label="Onondaga" />
-      </NysSelectComponent>
+        <NysOption value="albany" label="Albany" />
+        <NysOption value="erie" label="Erie" />
+        <NysOption value="kings" label="Kings" />
+        <NysOption value="monroe" label="Monroe" />
+        <NysOption value="onondaga" label="Onondaga" />
+      </NysSelect>
 
-      <NysDatepickerComponent
+      <NysDatepicker
         name="eventDate"
         label="Event date"
         description="Choose a preferred date"
         width="md"
       />
 
-      <NysFileinputComponent
+      <NysFileinput
         name="documents"
         label="Upload documents"
         description="Accepted formats: .pdf, .jpg, .png"
@@ -88,7 +88,7 @@ const FormInputsSection = () => (
         dropzone
       />
     </div>
-    <NysDividerComponent />
+    <NysDivider />
   </section>
 );
 

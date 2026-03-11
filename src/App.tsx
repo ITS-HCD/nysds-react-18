@@ -1,14 +1,3 @@
-import {
-  NysSkipnavComponent,
-  NysUnavHeaderComponent,
-  NysGlobalHeaderComponent,
-  NysGlobalFooterComponent,
-  NysUnavFooterComponent,
-  NysBacktotopComponent,
-  NysButtonComponent,
-  NysDropdownMenuComponent,
-  NysDropdownMenuItemComponent,
-} from "./utils/nysds-components";
 import AlertsSection from "./sections/AlertsSection";
 import BadgesSection from "./sections/BadgesSection";
 import ButtonsSection from "./sections/ButtonsSection";
@@ -23,28 +12,41 @@ import StepperSection from "./sections/StepperSection";
 import "./App.css";
 
 import {
-  NysButton,
+  NysSkipnav,
+  NysUnavHeader,
+  NysGlobalHeader,
+  NysGlobalFooter,
+  NysUnavFooter,
+  NysBacktotop,
   NysDropdownMenu,
   NysDropdownMenuItem,
+  NysButton,
 } from "@nysds/components/react";
-
 
 function App() {
   return (
     <>
-      <NysSkipnavComponent />
-      <NysUnavHeaderComponent />
-      <NysGlobalHeaderComponent
+      <NysSkipnav />
+      <NysUnavHeader />
+      <NysGlobalHeader
         appName="NYSDS React Showcase"
         agencyName="New York State"
       >
         <ul>
-          <li><a href="#alerts">Alerts</a></li>
-          <li><a href="#buttons">Buttons</a></li>
-          <li><a href="#forms">Forms</a></li>
-          <li><a href="#data-display">Data Display</a></li>
+          <li>
+            <a href="#alerts">Alerts</a>
+          </li>
+          <li>
+            <a href="#buttons">Buttons</a>
+          </li>
+          <li>
+            <a href="#forms">Forms</a>
+          </li>
+          <li>
+            <a href="#data-display">Data Display</a>
+          </li>
         </ul>
-      </NysGlobalHeaderComponent>
+      </NysGlobalHeader>
 
       <main id="main-content" className="nys-flex-1">
         <div className="main-content">
@@ -54,63 +56,59 @@ function App() {
             via <code>@lit/react</code>.
           </p>
 
-                <h2>Dropdown Action Menu with Icons</h2>
-      <NysButtonComponent
-        id="trigger-id3"
-        label="Actions Dropdown"
-      ></NysButtonComponent>
-      <NysDropdownMenuComponent
-        id="dropdownmenu3"
-        for="trigger-id3"
-        position="bottom-end"
-      >
-        <NysDropdownMenuItemComponent
-          label="Fire Confetti"
-          prefixIcon="lock_filled"
-        ></NysDropdownMenuItemComponent>
-        <NysDropdownMenuItemComponent
-          label="Action 2"
-          prefixIcon="social_youtube"
-        ></NysDropdownMenuItemComponent>
-        <NysDropdownMenuItemComponent
-          label="Disabled Action 3"
-          prefixIcon="visibility"
-          disabled
-        ></NysDropdownMenuItemComponent>
-        <NysDropdownMenuItemComponent
-          label="Action 4"
-          prefixIcon="sms"
-        ></NysDropdownMenuItemComponent>
-      </NysDropdownMenuComponent>
+          <h2>Dropdown Action Menu with Icons</h2>
+          <NysButton
+            id="trigger-id3"
+            label="Actions Dropdown"
+          ></NysButton>
+          <NysDropdownMenu
+            id="dropdownmenu3"
+            for="trigger-id3"
+            position="bottom-end"
+          >
+            <NysDropdownMenuItem
+              label="Fire Confetti"
+              prefixIcon="lock_filled"
+            ></NysDropdownMenuItem>
+            <NysDropdownMenuItem
+              label="Action 2"
+              prefixIcon="social_youtube"
+            ></NysDropdownMenuItem>
+            <NysDropdownMenuItem
+              label="Disabled Action 3"
+              prefixIcon="visibility"
+              disabled
+            ></NysDropdownMenuItem>
+            <NysDropdownMenuItem
+              label="Action 4"
+              prefixIcon="sms"
+            ></NysDropdownMenuItem>
+          </NysDropdownMenu>
 
-      <NysButton
-        id="trigger-id4"
-        label="Actions Dropdown"
-      ></NysButton>
-      <NysDropdownMenu
-        id="dropdownmenu3"
-        for="trigger-id4"
-        position="bottom-end"
-      >
-        <NysDropdownMenuItem
-          label="Fire Confetti"
-          prefixIcon="lock_filled"
-          
-        ></NysDropdownMenuItem>
-        <NysDropdownMenuItem
-          label="Action 2"
-          prefixIcon="social_youtube"
-        ></NysDropdownMenuItem>
-        <NysDropdownMenuItem
-          label="Disabled Action 3"
-          prefixIcon="visibility"
-          disabled
-        ></NysDropdownMenuItem>
-        <NysDropdownMenuItem
-          label="Action 4"
-          prefixIcon="sms"
-        ></NysDropdownMenuItem>
-      </NysDropdownMenu>
+          <NysButton id="trigger-id4" label="Actions Dropdown"></NysButton>
+          <NysDropdownMenu
+            id="dropdownmenu3"
+            for="trigger-id4"
+            position="bottom-end"
+          >
+            <NysDropdownMenuItem
+              label="Fire Confetti"
+              prefixIcon="lock_filled"
+            ></NysDropdownMenuItem>
+            <NysDropdownMenuItem
+              label="Action 2"
+              prefixIcon="social_youtube"
+            ></NysDropdownMenuItem>
+            <NysDropdownMenuItem
+              label="Disabled Action 3"
+              prefixIcon="visibility"
+              disabled
+            ></NysDropdownMenuItem>
+            <NysDropdownMenuItem
+              label="Action 4"
+              prefixIcon="sms"
+            ></NysDropdownMenuItem>
+          </NysDropdownMenu>
 
           <AlertsSection />
           <BadgesSection />
@@ -126,7 +124,7 @@ function App() {
         </div>
       </main>
 
-      <NysGlobalFooterComponent agencyName="New York State">
+      <NysGlobalFooter agencyName="New York State">
         <ul>
           <li>
             <a href="https://ny.gov">NY.gov</a>
@@ -135,9 +133,9 @@ function App() {
             <a href="https://designsystem.ny.gov">NYSDS</a>
           </li>
         </ul>
-      </NysGlobalFooterComponent>
-      <NysUnavFooterComponent />
-      <NysBacktotopComponent />
+      </NysGlobalFooter>
+      <NysUnavFooter />
+      <NysBacktotop />
     </>
   );
 }

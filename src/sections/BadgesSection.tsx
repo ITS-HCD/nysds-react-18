@@ -1,39 +1,39 @@
 import {
-  NysBadgeComponent,
-  NysDividerComponent,
-} from "../utils/nysds-components";
+  NysBadge,
+  NysDivider,
+} from "@nysds/components/react";
 
 const BadgesSection = () => (
   <section id="badges">
     <h2 className="section-heading">Badges</h2>
     <div className="component-row">
-      <NysBadgeComponent label="Neutral" intent="neutral" />
-      <NysBadgeComponent label="Success" intent="success" prefixIcon />
-      <NysBadgeComponent label="Warning" intent="warning" prefixIcon />
-      <NysBadgeComponent label="Error" intent="error" prefixIcon />
+      <NysBadge label="Neutral" intent="neutral" />
+      <NysBadge label="Success" intent="success" prefixIcon />
+      <NysBadge label="Warning" intent="warning" prefixIcon />
+      <NysBadge label="Error" intent="error" prefixIcon />
     </div>
     <h3>Strong Variant</h3>
     <div className="component-row">
-      <NysBadgeComponent
+      <NysBadge
         label="Approved"
         intent="success"
         variant="strong"
         prefixIcon
       />
-      <NysBadgeComponent
+      <NysBadge
         label="Pending"
         intent="warning"
         variant="strong"
         prefixIcon
       />
-      <NysBadgeComponent
+      <NysBadge
         label="Rejected"
         intent="error"
         variant="strong"
         prefixIcon
       />
     </div>
-    <NysDividerComponent />
+    <NysDivider />
   </section>
 );
 

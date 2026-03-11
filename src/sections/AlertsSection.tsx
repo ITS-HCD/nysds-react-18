@@ -1,34 +1,34 @@
 import {
-  NysAlertComponent,
-  NysDividerComponent,
-} from "../utils/nysds-components";
+  NysAlert,
+  NysDivider,
+} from "@nysds/components/react";
 
 const AlertsSection = () => (
   <section id="alerts">
     <h2 className="section-heading">Alerts</h2>
     <div className="component-grid">
-      <NysAlertComponent
+      <NysAlert
         type="info"
         heading="Information"
         text="This is an informational alert for general guidance."
       />
-      <NysAlertComponent
+      <NysAlert
         type="success"
         heading="Success"
         text="Your application has been submitted successfully."
       />
-      <NysAlertComponent
+      <NysAlert
         type="warning"
         heading="Warning"
         text="Please review your information before proceeding."
       />
-      <NysAlertComponent
+      <NysAlert
         type="danger"
         heading="Error"
         text="There was a problem processing your request."
       />
     </div>
-    <NysDividerComponent />
+    <NysDivider />
   </section>
 );
 
