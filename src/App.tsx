@@ -52,8 +52,9 @@ function App() {
         <div className="main-content">
           <h1>NYSDS Component Showcase</h1>
           <p>
-            This page demonstrates NYSDS web components integrated with React
-            via <code>@lit/react</code>.
+            React 18
+            <br />
+            A live preview of NYSDS components with built-in React support 😉
           </p>
 
           <h2>Dropdown Action Menu with Icons</h2>
