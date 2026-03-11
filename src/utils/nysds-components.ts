@@ -1,5 +1,5 @@
 /** 
- * As of Version @nysds/components@1.16.0-alpha-1", 
+ * ⚠️ As of Version @nysds/components@1.16.0-alpha-1", 
  * The use of manual React wrapping is no longer needed.
  */
 
